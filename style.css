@@ -29,6 +29,7 @@ body {
     background-size: cover;
     scroll-behavior: smooth;
     overflow: hidden;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
