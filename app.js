@@ -3,8 +3,8 @@ const menuBtn = document.querySelector(".menubtn");
 const menu = document.querySelector(".menu_container");
 const closeMenu = document.querySelector(".closeMenu");
 var oldScroll = 0;
-var typed, typed2;
-var isShown = [false, false];
+var typed, typed2, typed3;
+var isShown = [false, false, false];
 const options = [document.querySelector("#option1"), document.querySelector("#option2"), document.querySelector("#option3"), document.querySelector("#option4"), document.querySelector("#option5")];
 const options1 = [document.querySelector(".coffee"), document.querySelector(".specials"), document.querySelector(".ncd"), document.querySelector(".pastries"), document.querySelector(".all")];
 var chosenMenuOpt = 0;
@@ -87,6 +87,16 @@ document.addEventListener("scroll", () => {
             endDelay: 500
         });
         isShown[1] = true;
+    }
+    if(isInViewport(document.querySelector('.title_text_contactUs')) && isShown[2] === false) {
+        typed3 = new Typed(('.title_text_contactUs'), {
+            strings: ["Contact Us"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            startDelay: 750,
+            endDelay: 500
+        });
+        isShown[2] = true;
     }
 });
 
