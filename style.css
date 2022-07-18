@@ -114,6 +114,14 @@ body {
     transform-origin: bottom left;
 }
 
+.phone_navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
 .nav_block {
     width: 100%;
     height: 75px;
@@ -358,7 +366,7 @@ body {
     background-position: center;
 }
 
-.title_contactUs {
+.title_contactUs, .subtitle_contactUs {
     color: var(--white);
     font-size: xx-large;
     user-select: text;
@@ -371,4 +379,13 @@ body {
 
 .title_text_contactUs {
     user-select: text;
+}
+
+.cuc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subtitle_contactUs {
+    margin-top: 12.5px;
 }

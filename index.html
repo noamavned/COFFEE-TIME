@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/ideal-image-slider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-loader/3.3.3/css-loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma-tooltip/1.2.0/bulma-tooltip.min.css">
     <!-- functions script -->
     <script src="functions.js"></script>
 </head>
@@ -26,6 +28,9 @@
         <a class="item_navbar" onclick="aboutUs()">ABOUT US</a>
         <a class="item_navbar" onclick="goToMenu()">MENU</a>
         <a class="item_navbar">CONTACT US</a>
+        <a href="tel:" class="has-tooltip-arrow has-tooltip-left" style="color: black; text-decoration: none; position: absolute; right: 40px;" data-tooltip="Call us">
+            <i class="fa-solid fa-phone phone_navbar"></i>
+        </a>
     </nav>
     <div class="nav_block"></div>
     <!-- menu -->
@@ -38,6 +43,9 @@
         <a class="item_menu" onclick="aboutUs()">ABOUT US</a>
         <a class="item_menu" onclick="goToMenu()">MENU</a>
         <a class="item_menu">CONTACT US</a>
+        <a href="tel:" class="has-tooltip-arrow has-tooltip-bottom" style="color: black;" data-tooltip="Call us">
+            <i class="fa-solid fa-phone phone_navbar"></i>
+        </a>
     </div> 
     <!--  -->
     <div class="con_con_slider">
@@ -274,11 +282,18 @@
             <div class="title_text_contactUs"></div>
         </div>
         <div class="sep"></div>
-        
+        <div class="cuc">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216281.13028480086!2d34.61242178189227!3d32.11269634180499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b2771f52d3b%3A0x55f9363c7803e288!2sCoffee%20Time!5e0!3m2!1sen!2sil!4v1658155316244!5m2!1sen!2sil" width="60%" height="450" style="border:0; margin: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="cucc">
+                <div class="subtitle_contactUs">Write your details.<br>we will call you back!</div>
+                <input type="text" id="nameInputCU" class="input" placeholder="Name">
+            </div>
+        </div>
     </div>
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ideal-image-slider/1.5.1/ideal-image-slider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
     <script>
         var slider = new IdealImageSlider.Slider({
             selector: '.slide_con',
