@@ -2,11 +2,11 @@ const navbar = document.querySelector(".nav");
 const menuBtn = document.querySelector(".menubtn");
 const menu = document.querySelector(".menu_container");
 const closeMenu = document.querySelector(".closeMenu");
+const options = [document.querySelector("#option1"), document.querySelector("#option2"), document.querySelector("#option3"), document.querySelector("#option4"), document.querySelector("#option5")];
+const options1 = [document.querySelector(".coffee"), document.querySelector(".specials"), document.querySelector(".ncd"), document.querySelector(".pastries"), document.querySelector(".all")];
 var oldScroll = 0;
 var typed, typed2, typed3;
 var isShown = [false, false, false];
-const options = [document.querySelector("#option1"), document.querySelector("#option2"), document.querySelector("#option3"), document.querySelector("#option4"), document.querySelector("#option5")];
-const options1 = [document.querySelector(".coffee"), document.querySelector(".specials"), document.querySelector(".ncd"), document.querySelector(".pastries"), document.querySelector(".all")];
 var chosenMenuOpt = 0;
 
 

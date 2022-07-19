@@ -10,6 +10,7 @@
     --scrollbarThumb: rgba(176, 146, 115, 0.9);
     --black: rgb(37, 18, 0);
     --white: rgb(224, 200, 176);
+    --whiteUnfocused: rgb(114, 111, 106);
 }
 
 * {
@@ -157,7 +158,7 @@ body {
     cursor: pointer;
     color: var(--white);
     transition: all 0.4s;
-    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+    transition-timing-function: cubic-bezier(0.5, 3, 0, 1);
 }
 
 .about_us_slider:active {
@@ -249,7 +250,9 @@ body {
     display: flex;
 }
 
-.title_text_abotUs, .menu_product, .menu_subtitle {
+.title_text_abotUs,
+.menu_product,
+.menu_subtitle {
     user-select: text;
 }
 
@@ -306,7 +309,8 @@ body {
     margin-bottom: 50px;
 }
 
-.menu_con, .menu_options {
+.menu_con,
+.menu_options {
     display: flex;
     flex-wrap: wrap;
 }
@@ -359,14 +363,15 @@ body {
 
 .contact_us {
     width: 100%;
-    height: 750px;
+    height: fit-content;
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("imgs/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.title_contactUs, .subtitle_contactUs {
+.title_contactUs,
+.subtitle_contactUs {
     color: var(--white);
     font-size: xx-large;
     user-select: text;
@@ -388,4 +393,142 @@ body {
 
 .subtitle_contactUs {
     margin-top: 12.5px;
+}
+
+.input-con {
+    position: relative;
+    width: fit-content;
+    height: max-content;
+    color: var(--white);
+    margin: 20px;
+    margin-left: 27.5px;
+}
+
+.input-con>label {
+    position: absolute;
+    left: 5px;
+    cursor: text;
+    transition: 1s ease-in-out;
+}
+
+.input-con>input,
+.input-con>textarea {
+    outline: none !important;
+    border: 0px;
+    background-color: transparent;
+    color: var(--white);
+    border-bottom: 2px solid var(--whiteUnfocused);
+    transition: 1s linear;
+    width: 250px;
+}
+
+.input-con>textarea {
+    min-height: 50px;
+    min-width: 100px;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+.input-con>input:focus,
+.input-con>input:not(:placeholder-shown),
+.input-con>textarea:focus,
+.input-con>textarea:not(:placeholder-shown) {
+    outline: none !important;
+    border: 0px;
+    transition: 1s ease-out;
+    border-bottom: 2px solid var(--white);
+}
+
+.input-con>input:focus+label,
+.input-con>input:not(:placeholder-shown)+label {
+    color: var(--whiteUnfocused);
+    transform: scale(0.8);
+    top: -18px;
+    left: -1px;
+}
+
+.input-con>textarea:focus+label,
+.input-con>textarea:not(:placeholder-shown)+label {
+    color: var(--whiteUnfocused);
+    transform: scale(0.8);
+    top: -20px;
+    left: -1px;
+}
+
+.button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: var(--whiteUnfocused);
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 7px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: var(--black);
+    background: var(--white);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button:hover {
+    filter: brightness(110%);
+}
+
+.button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button:focus:not(:focus-visible) {
+    outline: none;
 }
