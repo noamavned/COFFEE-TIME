@@ -12,7 +12,6 @@ function validateName(x) {
 }
 
 function verify(data) {
-    console.log(data);
     if (validateName(data[0]) === false) {return [false, 1];}
     if (validateMail(data[1]) === false) {return [false, 2];}
     if (data[2].length == 0) {return [false, 3];}
@@ -31,6 +30,16 @@ function aboutUs() {
 
 function goToMenu() {
     var rect = document.querySelector(".menu").getBoundingClientRect();
+    window.scroll({
+        top: window.scrollY + rect.top,
+        behavior: 'smooth'
+    });
+    menu.style.width = "0px";
+    document.querySelector("#overlay").classList.add("hidden");
+}
+
+function goToCu() {
+    var rect = document.querySelector(".contact_us").getBoundingClientRect();
     window.scroll({
         top: window.scrollY + rect.top,
         behavior: 'smooth'
